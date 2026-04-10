@@ -16,10 +16,10 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[760px] md:min-h-[980px] lg:min-h-[980px] pt-24 pb-10 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row justify-between items-start relative gap-16 md:gap-20 lg:gap-0">
+        <div className="flex flex-col 2xl:flex-row justify-between items-start relative gap-16 md:gap-20 2xl:gap-0">
           
           {/* Left Column */}
-          <div className="w-full lg:w-1/2 relative z-20 pt-6 md:pt-8 min-h-0 md:min-h-[560px] lg:min-h-[680px]">
+          <div className="w-full 2xl:w-1/2 relative z-20 pt-6 md:pt-8 min-h-0 md:min-h-[560px] lg:min-h-[680px] md:pr-[280px] lg:pr-[340px] 2xl:pr-0">
             {/* Mobile Hero Copy */}
             <div className="md:hidden relative z-20">
               <h1 className="text-[56px] sm:text-[64px] font-bold text-white tracking-tight leading-[0.95] break-words max-w-full">
@@ -79,18 +79,18 @@ export default function HomePage() {
               </div>
 
               {/* Cruzz-Robot hướng dẫn - Mobile: giữ nguyên card và đẩy xuống dưới */}
-              <div className="mt-12 w-full max-w-[409px] mx-auto">
+              <div className="mt-12 w-full max-w-[440px] mx-auto">
                 <div className="relative">
-                  <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 pt-36 flex flex-col items-center relative z-20 shadow-2xl">
-                    <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
-                      <div className="absolute bottom-[-15px] w-44 h-24 bg-[#40E0D0]/20 blur-[25px] rounded-full z-0"></div>
+                  <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[38px] p-7 pt-44 flex flex-col items-center relative z-20 shadow-2xl">
+                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+                      <div className="absolute bottom-[-18px] w-52 h-28 bg-[#40E0D0]/20 blur-[28px] rounded-full z-0"></div>
                       <img
                         src="https://cazllsidgvysyxbvrftq.supabase.co/storage/v1/object/public/images-sacviet/logo1.png"
                         alt="Cruzz Robot"
-                        className="w-36 h-auto drop-shadow-2xl"
+                        className="w-44 h-auto drop-shadow-2xl"
                       />
                     </div>
-                    <h3 className="text-[#ff0000] font-bold text-xl mb-5 text-center">Cruzz-Robot hướng dẫn</h3>
+                    <h3 className="text-[#ff0000] font-bold text-2xl mb-6 text-center">Cruzz-Robot hướng dẫn</h3>
                     <button className="text-sm text-white border border-white/40 bg-white/10 backdrop-blur-md px-8 py-2 rounded-full hover:bg-white/20 transition-colors relative z-40">
                       Xem thêm
                     </button>
@@ -195,23 +195,23 @@ export default function HomePage() {
             
           </div>
           {/* Right Column */}
-          <div className="hidden md:flex w-full lg:w-1/2 relative z-20 justify-center lg:justify-end md:mt-24 lg:mt-8 mt-32">
+          <div className="hidden md:flex md:absolute md:right-4 lg:right-8 md:top-8 lg:top-25 z-20 justify-center w-[290px] lg:w-[320px]">
             {/* Large Card (Cruzz-Robot hướng dẫn) */}
-            <div className="relative w-[230px] md:w-[250px] lg:w-[320px] mt-6 lg:mt-10">
-              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 lg:p-8 pt-40 md:pt-44 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
+            <div className="relative w-full mt-0">
+              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[40px] p-7 lg:p-9 pt-40 md:pt-20 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
                 {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
-                <div className="absolute -top-12 md:-top-14 lg:-top-20 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+                <div className="absolute -top-16 md:-top-20 lg:-top-[72px] left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
                   {/* Ambient glow */}
-                  <div className="absolute bottom-[-15px] w-48 h-24 bg-[#40E0D0]/20 blur-[25px] rounded-full z-0"></div>
+                  <div className="absolute bottom-[-18px] w-56 h-28 bg-[#40E0D0]/20 blur-[30px] rounded-full z-0"></div>
                   
                   {/* Robot Image */}
                   <img 
                     src="https://cazllsidgvysyxbvrftq.supabase.co/storage/v1/object/public/images-sacviet/logo1.png"
                     alt="Cruzz Robot" 
-                    className="w-32 md:w-36 lg:w-56 h-auto drop-shadow-2xl" 
+                    className="w-40 md:w-48 lg:w-60 h-auto drop-shadow-2xl" 
                   />
                 </div>
-                <h3 className="text-[#ff0000] font-bold text-lg lg:text-xl mb-5 lg:mb-6 text-center">Cruzz-Robot hướng dẫn</h3>
+                <h3 className="text-[#ff0000] font-bold text-xl lg:text-1xl mb-6 lg:mb-7 text-center">Cruzz-Robot hướng dẫn</h3>
                 <button className="text-sm text-white border border-white/40 bg-white/10 backdrop-blur-md px-8 py-2 rounded-full hover:bg-white/20 transition-colors relative z-40">
                   Xem thêm
                 </button>
