@@ -195,12 +195,12 @@ export default function HomePage() {
             
           </div>
           {/* Right Column */}
-          <div className="hidden md:flex md:absolute md:right-4 lg:right-8 md:top-8 lg:top-[100px] z-20 justify-center w-[290px] lg:w-[320px]">
+          <div className="hidden md:flex md:absolute md:right-4 lg:right-8 md:top-20 lg:top-24 z-20 justify-center w-[290px] lg:w-[340px]">
             {/* Large Card (Cruzz-Robot hướng dẫn) */}
             <div className="relative w-full mt-0">
-              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[40px] p-7 lg:p-9 pt-40 md:pt-20 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
+              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[40px] p-7 lg:p-9 pt-44 md:pt-48 lg:pt-48 flex flex-col items-center relative z-20 shadow-2xl">
                 {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
-                <div className="absolute -top-16 md:-top-20 lg:-top-[72px] left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+                <div className="absolute -top-10 md:-top-12 lg:-top-14 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
                   {/* Ambient glow */}
                   <div className="absolute bottom-[-18px] w-56 h-28 bg-[#40E0D0]/20 blur-[30px] rounded-full z-0"></div>
                   
@@ -208,10 +208,10 @@ export default function HomePage() {
                   <img 
                     src="https://cazllsidgvysyxbvrftq.supabase.co/storage/v1/object/public/images-sacviet/logo1.png"
                     alt="Cruzz Robot" 
-                    className="w-40 md:w-48 lg:w-60 h-auto drop-shadow-2xl" 
+                    className="w-36 md:w-40 lg:w-48 h-auto drop-shadow-2xl" 
                   />
                 </div>
-                <h3 className="text-[#ff0000] font-bold text-xl lg:text-1xl mb-6 lg:mb-7 text-center">Cruzz-Robot hướng dẫn</h3>
+                <h3 className="text-[#ff0000] font-bold text-xl lg:text-2xl mb-6 lg:mb-7 text-center">Cruzz-Robot hướng dẫn</h3>
                 <button className="text-sm text-white border border-white/40 bg-white/10 backdrop-blur-md px-8 py-2 rounded-full hover:bg-white/20 transition-colors relative z-40">
                   Xem thêm
                 </button>
