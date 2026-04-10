@@ -2,92 +2,85 @@ import React from 'react';
 
 export default function Architecture() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-24">
       {/* Hero Section */}
-      <div className="relative h-[70vh] flex items-center overflow-hidden">
+      <div className="relative h-[52vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")' }}
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")' }}
         >
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="text-white md:w-1/2">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">THIẾT KẾ THI<br/>CÔNG KIẾN TRÚC</h1>
-            <p className="text-lg md:text-xl font-light max-w-md">
-              Kiến trúc đánh thức mọi giác quan và xúc cảm bằng những thứ tưởng chừng như gần gũi nhất.
-            </p>
-          </div>
-          <div className="md:w-1/2 flex justify-end">
-            <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Skyscrapers" 
-              className="w-full max-w-lg h-auto rounded-lg shadow-2xl"
-            />
-          </div>
+        <div className="relative z-10 text-center text-white flex flex-col items-center px-6">
+          <div className="w-1 h-12 bg-[#d97736] mb-6"></div>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight tracking-wide">THIẾT KẾ THI<br/>CÔNG NỘI THẤT</h1>
+          <p className="text-base md:text-xl font-light max-w-2xl leading-relaxed">
+            Kiến trúc đánh thức mọi giác quan và xúc cảm bằng<br className="hidden md:block" />những thứ tưởng chừng như gần gũi nhất.
+          </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="relative py-24 overflow-hidden">
-        {/* Blurred background for the projects section */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")' }}
-        >
-          <div className="absolute inset-0 bg-white/50 backdrop-blur-xl"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-16 drop-shadow-md">DỰ ÁN GẦN ĐÂY</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Column 1 */}
-            <div className="space-y-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Column 1 */}
+          <div className="space-y-12 md:pt-20">
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 1" 
-                className="w-full h-[300px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[250px] object-cover"
               />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
+            </div>
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 2" 
-                className="w-full h-[250px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[350px] object-cover"
               />
-              <img 
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 3" 
-                className="w-full h-[200px] object-cover shadow-lg"
-              />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
             </div>
-            
-            {/* Column 2 */}
-            <div className="space-y-6 pt-12">
+          </div>
+          
+          {/* Column 2 */}
+          <div className="space-y-12">
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 4" 
-                className="w-full h-[400px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[450px] object-cover"
               />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
+            </div>
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 5" 
-                className="w-full h-[250px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[250px] object-cover"
               />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
             </div>
+          </div>
 
-            {/* Column 3 */}
-            <div className="space-y-6">
+          {/* Column 3 */}
+          <div className="space-y-12 md:pt-20">
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 6" 
-                className="w-full h-[250px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[250px] object-cover"
               />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
+            </div>
+            <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1600585154526-990dced4ea0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Project 7" 
-                className="w-full h-[300px] object-cover shadow-lg"
+                alt="Kitchen Lights" 
+                className="w-full h-[450px] object-cover"
               />
+              <p className="mt-4 text-lg text-gray-800">Kitchen Lights</p>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Architecture from './pages/Architecture';
 import Interior from './pages/Interior';
 import Furniture from './pages/Furniture';
+import AboutPage from './pages/AboutPage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/project" element={<ProjectDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/architecture" element={<Architecture />} />

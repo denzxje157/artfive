@@ -1,43 +1,73 @@
-import { ShoppingCart, Mail, Bell, ChevronDown, X } from 'lucide-react';
-import { useState } from 'react';
+import { ShoppingCart, Mail, Bell, ChevronDown, Menu, X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMailOpen, setIsMailOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  
+  // Thêm State quản lý Menu trên Điện thoại
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  
   const location = useLocation();
+  const servicesRef = useRef<HTMLDivElement | null>(null);
 
   const isHome = location.pathname === '/';
-  const navBg = isHome ? 'bg-transparent backdrop-blur-sm' : 'bg-[#151412]';
+  const navBg = isHome
+    ? 'bg-black/45 backdrop-blur-md border-b border-white/10'
+    : 'bg-[#151412]/95 backdrop-blur-md border-b border-white/10';
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsMobileServicesOpen(false);
+    setIsServicesOpen(false);
+    setIsMailOpen(false);
+    setIsNotificationsOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 ${navBg}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
-          
-          {/* Logo bên trái (Nếu có) */}
-          <div className="flex-shrink-0">
-            {/* Thêm logo hoặc text logo vào đây */}
-          </div>
-          
-          {/* Nhóm Menu và Icon lại, đẩy sang bên phải */}
-          <div className="flex items-center justify-end flex-1 space-x-1 lg:space-x-8">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative flex items-center h-20 md:h-24">
+          <div className="flex items-center ml-auto">
             
-            {/* Các link menu */}
-            <div className="hidden md:flex items-center space-x-10">
-              <Link to="/" className="text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide">GIỚI THIỆU</Link>
-              <div className="relative group cursor-pointer">
-                <Link to="/services" className="flex items-center text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide">
-                  DỊCH VỤ <ChevronDown className="ml-1 w-4 h-4" />
-                </Link>
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block z-50">
-                  <Link to="/architecture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Thiết kế Kiến trúc</Link>
-                  <Link to="/interior" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Thiết kế Nội thất</Link>
-                  <Link to="/furniture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Vật phẩm Nội thất</Link>
+            {/* Desktop Menu - Bị ẩn trên Mobile (hidden lg:flex) */}
+            <div className="hidden lg:flex items-center gap-8 lg:gap-10 mr-8 lg:mr-12">
+              <Link to="/about" className="text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide">GIỚI THIỆU</Link>
+
+              <div
+                ref={servicesRef}
+                className="relative"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <div className="flex items-center text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide gap-1">
+                  <Link to="/services" onClick={() => setIsServicesOpen(false)}>
+                    DỊCH VỤ
+                  </Link>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </div>
+                <div className={`absolute left-0 top-full mt-0 w-56 bg-white rounded-lg shadow-xl py-3 z-50 ${isServicesOpen ? 'block' : 'hidden'}`}>
+                  <Link to="/architecture" onClick={() => setIsServicesOpen(false)} className="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100">Thiết kế Kiến trúc</Link>
+                  <Link to="/interior" onClick={() => setIsServicesOpen(false)} className="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100">Thiết kế Nội thất</Link>
+                  <Link to="/furniture" onClick={() => setIsServicesOpen(false)} className="block px-6 py-3 text-sm text-gray-700 hover:bg-gray-100">Vật phẩm Nội thất</Link>
                 </div>
               </div>
-              <div className="relative group cursor-pointer">
+
+              <div className="relative">
                 <Link to="/project" className="flex items-center text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide">
                   DỰ ÁN <ChevronDown className="ml-1 w-4 h-4" />
                 </Link>
@@ -47,8 +77,8 @@ export default function Navbar() {
               <Link to="#" className="text-white hover:text-gray-300 text-sm font-medium uppercase tracking-wide">LIÊN HỆ</Link>
             </div>
 
-            {/* Các icon */}
-            <div className="flex items-center space-x-8">
+            {/* Các Icons bên phải */}
+            <div className="flex items-center space-x-4 lg:space-x-8">
               <button className="text-white hover:text-gray-300">
                 <ShoppingCart className="w-5 h-5" />
               </button>
@@ -93,10 +123,63 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-            </div>
 
+              {/* Mobile Hamburger Button - Chỉ hiện dưới lg */}
+              <button 
+                className="lg:hidden text-white hover:text-gray-300 ml-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+              
+            </div>
           </div>
         </div>
+
+        {/* Mobile Menu Panel - Xổ xuống khi bấm nút Hamburger */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 w-full bg-[#151412]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl flex flex-col z-50 max-h-[80vh] overflow-y-auto">
+            <Link to="/about" className="px-6 py-4 text-white text-sm font-medium uppercase border-b border-white/5" onClick={() => setIsMobileMenuOpen(false)}>GIỚI THIỆU</Link>
+            
+            {/* Mobile Services Dropdown - Đã Sửa Lại */}
+            <div className="flex flex-col border-b border-white/5">
+              <div className="flex items-center justify-between px-6 py-3 w-full text-left">
+                
+                {/* Chữ DỊCH VỤ sẽ là Link để bấm chuyển sang trang /services */}
+                <Link to="/services" className="flex-1 text-white text-sm font-medium uppercase py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                  DỊCH VỤ
+                </Link>
+                
+                {/* Mũi tên bên phải sẽ là Nút để xổ mục con */}
+                <button 
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="p-2 bg-white/5 rounded-md border border-white/10 text-white"
+                  aria-label="Hiện danh sách dịch vụ"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+              </div>
+              
+              {/* Danh sách 3 mục con */}
+              {isMobileServicesOpen && (
+                <div className="flex flex-col bg-white/5 py-2">
+                   <Link to="/architecture" onClick={() => setIsMobileMenuOpen(false)} className="px-10 py-2.5 text-sm text-gray-300 hover:text-white">Thiết kế Kiến trúc</Link>
+                   <Link to="/interior" onClick={() => setIsMobileMenuOpen(false)} className="px-10 py-2.5 text-sm text-gray-300 hover:text-white">Thiết kế Nội thất</Link>
+                   <Link to="/furniture" onClick={() => setIsMobileMenuOpen(false)} className="px-10 py-2.5 text-sm text-gray-300 hover:text-white">Vật phẩm Nội thất</Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/project" className="px-6 py-4 text-white text-sm font-medium uppercase border-b border-white/5 flex items-center justify-between" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>DỰ ÁN</span>
+            </Link>
+            <Link to="#" className="px-6 py-4 text-white text-sm font-medium uppercase border-b border-white/5" onClick={() => setIsMobileMenuOpen(false)}>TUYỂN DỤNG</Link>
+            <Link to="#" className="px-6 py-4 text-white text-sm font-medium uppercase border-b border-white/5" onClick={() => setIsMobileMenuOpen(false)}>BLOG</Link>
+            <Link to="#" className="px-6 py-4 text-white text-sm font-medium uppercase" onClick={() => setIsMobileMenuOpen(false)}>LIÊN HỆ</Link>
+          </div>
+        )}
+
       </div>
     </nav>
   );
