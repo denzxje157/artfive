@@ -195,7 +195,7 @@ export default function HomePage() {
             
           </div>
           {/* Right Column */}
-          <div className="hidden md:flex md:absolute md:right-4 lg:right-8 md:top-8 lg:top-25 z-20 justify-center w-[290px] lg:w-[320px]">
+          <div className="hidden md:flex md:absolute md:right-4 lg:right-8 md:top-8 lg:top-[100px] z-20 justify-center w-[290px] lg:w-[320px]">
             {/* Large Card (Cruzz-Robot hướng dẫn) */}
             <div className="relative w-full mt-0">
               <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[40px] p-7 lg:p-9 pt-40 md:pt-20 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
