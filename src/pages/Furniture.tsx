@@ -37,18 +37,26 @@ export default function Furniture() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {/* Image 1 with controls */}
           <div className="flex flex-col">
-            <img 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-              alt="Furniture 1" 
-                className="w-full h-[340px] md:h-[500px] object-cover mb-6"
-            />
-            <div className="flex space-x-4">
-              <button className="w-10 h-10 bg-gray-400 text-white flex items-center justify-center hover:bg-gray-500 transition-colors">
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button className="w-10 h-10 bg-gray-400 text-white flex items-center justify-center hover:bg-gray-500 transition-colors">
-                <ChevronRight className="w-6 h-6" />
-              </button>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                alt="Furniture 1" 
+                className="w-full h-[340px] md:h-[500px] object-cover"
+              />
+              <div className="hidden md:flex absolute inset-y-0 left-0 right-0 items-center justify-between px-3 md:px-4 pointer-events-none">
+                <button
+                  aria-label="Previous image"
+                  className="w-11 h-11 md:w-10 md:h-10 rounded-full bg-black/45 text-white flex items-center justify-center border border-white/35 backdrop-blur-sm hover:bg-black/65 active:scale-95 transition pointer-events-auto"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  aria-label="Next image"
+                  className="w-11 h-11 md:w-10 md:h-10 rounded-full bg-black/45 text-white flex items-center justify-center border border-white/35 backdrop-blur-sm hover:bg-black/65 active:scale-95 transition pointer-events-auto"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
 

@@ -15,11 +15,11 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[760px] md:min-h-[900px] lg:min-h-[980px] pt-24 pb-10 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start relative gap-16 md:gap-0">
+      <section className="relative min-h-[760px] md:min-h-[980px] lg:min-h-[980px] pt-24 pb-10 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start relative gap-16 md:gap-20 lg:gap-0">
           
           {/* Left Column */}
-          <div className="w-full md:w-1/2 relative z-20 pt-6 md:pt-8 min-h-0 md:min-h-[560px] lg:min-h-[680px]">
+          <div className="w-full lg:w-1/2 relative z-20 pt-6 md:pt-8 min-h-0 md:min-h-[560px] lg:min-h-[680px]">
             {/* Mobile Hero Copy */}
             <div className="md:hidden relative z-20">
               <h1 className="text-[56px] sm:text-[64px] font-bold text-white tracking-tight leading-[0.95] break-words max-w-full">
@@ -77,20 +77,40 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+
+              {/* Cruzz-Robot hướng dẫn - Mobile: giữ nguyên card và đẩy xuống dưới */}
+              <div className="mt-20 sm:mt-24 w-full max-w-[409px] mx-auto">
+                <div className="relative">
+                  <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 pt-36 flex flex-col items-center relative z-20 shadow-2xl">
+                    <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+                      <div className="absolute bottom-[-15px] w-44 h-24 bg-[#40E0D0]/20 blur-[25px] rounded-full z-0"></div>
+                      <img
+                        src="https://cazllsidgvysyxbvrftq.supabase.co/storage/v1/object/public/images-sacviet/logo1.png"
+                        alt="Cruzz Robot"
+                        className="w-36 h-auto drop-shadow-2xl"
+                      />
+                    </div>
+                    <h3 className="text-[#ff0000] font-bold text-xl mb-5 text-center">Cruzz-Robot hướng dẫn</h3>
+                    <button className="text-sm text-white border border-white/40 bg-white/10 backdrop-blur-md px-8 py-2 rounded-full hover:bg-white/20 transition-colors relative z-40">
+                      Xem thêm
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             
             {/* Title & Description */}
-            <div className="hidden md:block absolute origin-top-left md:scale-[0.56] lg:scale-100" style={{ width: '946.05px', height: '242.6px', left: '0px', top: '50.06px' }}>
+            <div className="hidden md:block absolute origin-top-left md:scale-[0.48] lg:scale-100" style={{ width: '946.05px', height: '242.6px', left: '0px', top: '50.06px' }}>
               <h1 className="text-[80px] font-bold text-white tracking-tight leading-tight">
                 Art Five Design
               </h1>
-              <p className="text-gray-400 text-base max-w-[871.59px] leading-relaxed mt-4">
+              <p className="text-gray-400 text-base max-w-[640px] lg:max-w-[871.59px] leading-relaxed mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
 
             {/* Buttons (Explore & Live Demo) */}
-            <div className="hidden md:flex absolute items-center space-x-6 origin-top-left md:scale-[0.74] lg:scale-100" style={{ left: '3.95px', top: '235.03px' }}>
+            <div className="hidden md:flex absolute items-center space-x-6 origin-top-left md:scale-[0.66] lg:scale-100" style={{ left: '3.95px', top: '235.03px' }}>
               <button className="bg-[#e5e5e5] text-black w-[217px] h-[57.63px] rounded-sm font-medium hover:bg-white transition-colors text-base flex items-center justify-center">
                 Explore
               </button>
@@ -143,44 +163,44 @@ export default function HomePage() {
                 ></div>
 
                 {/* Group 47 -> Cruzz (Title) */}
-                <h3 
-                  className="absolute text-white font-bold" 
-                  style={{ 
-                    top: '69.61px', 
-                    left: '37.36px', 
-                    fontSize: '24px',
-                    lineHeight: '1.2'
-                  }}
-                >
-                  Cruzz
-                </h3>
+                  <h3 
+                    className="absolute text-white font-bold" 
+                    style={{ 
+                      top: '69.61px', 
+                      left: '37.36px', 
+                      fontSize: '24px',
+                      lineHeight: '1.2'
+                    }}
+                  >
+                    Cruzz
+                  </h3>
 
-                {/* Group 47 -> Text Paragraph */}
-                <p 
-                  className="absolute text-white opacity-75" 
-                  style={{ 
-                    top: '120.89px', 
-                    left: '34.87px', 
-                    width: '322.69px', 
-                    height: '49.48px',
-                    fontSize: '15px',
-                    lineHeight: '1.5'
-                  }}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
-                </p>
+                  {/* Group 47 -> Text Paragraph */}
+                  <p 
+                    className="absolute text-white opacity-75" 
+                    style={{ 
+                      top: '120.89px', 
+                      left: '34.87px', 
+                      width: '322.69px', 
+                      height: '49.48px',
+                      fontSize: '15px',
+                      lineHeight: '1.5'
+                    }}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                  </p>
+                </div>
+
               </div>
-
+              
             </div>
-            
-          </div>
-          {/* Right Column */}
-          <div className="hidden md:flex w-full md:w-1/2 relative z-20 justify-center md:justify-end md:mt-6 lg:mt-8 mt-32">
-            {/* Large Card (Cruzz-Robot hướng dẫn) */}
-            <div className="relative w-[260px] lg:w-[320px] mt-6 lg:mt-10">
-              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 lg:p-8 pt-32 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
-                {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
-                <div className="absolute -top-16 lg:-top-20 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+            {/* Right Column */}
+            <div className="hidden md:flex w-full lg:w-1/2 relative z-20 justify-center lg:justify-end md:mt-24 lg:mt-8 mt-32">
+              {/* Large Card (Cruzz-Robot hướng dẫn) */}
+              <div className="relative w-[230px] md:w-[250px] lg:w-[320px] mt-6 lg:mt-10">
+                <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 lg:p-8 pt-40 md:pt-44 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
+                  {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
+                  <div className="absolute -top-12 md:-top-14 lg:-top-20 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
                   {/* Ambient glow */}
                   <div className="absolute bottom-[-15px] w-48 h-24 bg-[#40E0D0]/20 blur-[25px] rounded-full z-0"></div>
                   
@@ -188,7 +208,7 @@ export default function HomePage() {
                   <img 
                     src="https://cazllsidgvysyxbvrftq.supabase.co/storage/v1/object/public/images-sacviet/logo1.png"
                     alt="Cruzz Robot" 
-                    className="w-44 lg:w-56 h-auto drop-shadow-2xl" 
+                    className="w-32 md:w-36 lg:w-56 h-auto drop-shadow-2xl" 
                   />
                 </div>
                 <h3 className="text-[#ff0000] font-bold text-lg lg:text-xl mb-5 lg:mb-6 text-center">Cruzz-Robot hướng dẫn</h3>
