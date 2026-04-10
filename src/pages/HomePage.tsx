@@ -79,7 +79,7 @@ export default function HomePage() {
               </div>
 
               {/* Cruzz-Robot hướng dẫn - Mobile: giữ nguyên card và đẩy xuống dưới */}
-              <div className="mt-20 sm:mt-24 w-full max-w-[409px] mx-auto">
+              <div className="mt-12 w-full max-w-[409px] mx-auto">
                 <div className="relative">
                   <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 pt-36 flex flex-col items-center relative z-20 shadow-2xl">
                     <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
@@ -104,7 +104,7 @@ export default function HomePage() {
               <h1 className="text-[80px] font-bold text-white tracking-tight leading-tight">
                 Art Five Design
               </h1>
-              <p className="text-gray-400 text-base max-w-[640px] lg:max-w-[871.59px] leading-relaxed mt-4">
+              <p className="text-gray-400 text-base max-w-[640px] lg:max-w-[540px] xl:max-w-[871.59px] leading-relaxed mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
@@ -163,44 +163,44 @@ export default function HomePage() {
                 ></div>
 
                 {/* Group 47 -> Cruzz (Title) */}
-                  <h3 
-                    className="absolute text-white font-bold" 
-                    style={{ 
-                      top: '69.61px', 
-                      left: '37.36px', 
-                      fontSize: '24px',
-                      lineHeight: '1.2'
-                    }}
-                  >
-                    Cruzz
-                  </h3>
+                <h3 
+                  className="absolute text-white font-bold" 
+                  style={{ 
+                    top: '69.61px', 
+                    left: '37.36px', 
+                    fontSize: '24px',
+                    lineHeight: '1.2'
+                  }}
+                >
+                  Cruzz
+                </h3>
 
-                  {/* Group 47 -> Text Paragraph */}
-                  <p 
-                    className="absolute text-white opacity-75" 
-                    style={{ 
-                      top: '120.89px', 
-                      left: '34.87px', 
-                      width: '322.69px', 
-                      height: '49.48px',
-                      fontSize: '15px',
-                      lineHeight: '1.5'
-                    }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
-                  </p>
-                </div>
-
+                {/* Group 47 -> Text Paragraph */}
+                <p 
+                  className="absolute text-white opacity-75" 
+                  style={{ 
+                    top: '120.89px', 
+                    left: '34.87px', 
+                    width: '322.69px', 
+                    height: '49.48px',
+                    fontSize: '15px',
+                    lineHeight: '1.5'
+                  }}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                </p>
               </div>
-              
+
             </div>
-            {/* Right Column */}
-            <div className="hidden md:flex w-full lg:w-1/2 relative z-20 justify-center lg:justify-end md:mt-24 lg:mt-8 mt-32">
-              {/* Large Card (Cruzz-Robot hướng dẫn) */}
-              <div className="relative w-[230px] md:w-[250px] lg:w-[320px] mt-6 lg:mt-10">
-                <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 lg:p-8 pt-40 md:pt-44 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
-                  {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
-                  <div className="absolute -top-12 md:-top-14 lg:-top-20 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
+            
+          </div>
+          {/* Right Column */}
+          <div className="hidden md:flex w-full lg:w-1/2 relative z-20 justify-center lg:justify-end md:mt-24 lg:mt-8 mt-32">
+            {/* Large Card (Cruzz-Robot hướng dẫn) */}
+            <div className="relative w-[230px] md:w-[250px] lg:w-[320px] mt-6 lg:mt-10">
+              <div className="bg-gradient-to-b from-white/15 to-transparent backdrop-blur-lg border border-white/20 rounded-[32px] p-6 lg:p-8 pt-40 md:pt-44 lg:pt-40 flex flex-col items-center relative z-20 shadow-2xl">
+                {/* Robot Container with Lighting - Căn giữa, lún vào thẻ */}
+                <div className="absolute -top-12 md:-top-14 lg:-top-20 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center pointer-events-none">
                   {/* Ambient glow */}
                   <div className="absolute bottom-[-15px] w-48 h-24 bg-[#40E0D0]/20 blur-[25px] rounded-full z-0"></div>
                   
