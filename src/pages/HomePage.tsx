@@ -100,7 +100,7 @@ export default function HomePage() {
             </div>
             
             {/* Title & Description */}
-            <div className="hidden md:block absolute origin-top-left md:scale-[0.48] lg:scale-100" style={{ width: '946.05px', height: '242.6px', left: '0px', top: '50.06px' }}>
+<div className="hidden md:block relative origin-top-left md:scale-[0.48] lg:scale-100 mb-8">
               <h1 className="text-[80px] font-bold text-white tracking-tight leading-tight">
                 Art Five Design
               </h1>
@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
 
             {/* Buttons (Explore & Live Demo) */}
-            <div className="hidden md:flex absolute items-center space-x-6 origin-top-left md:scale-[0.66] lg:scale-100" style={{ left: '3.95px', top: '235.03px' }}>
+<div className="hidden md:flex items-center space-x-6 relative origin-top-left md:scale-[0.66] lg:scale-100 mb-12">
               <button className="bg-[#e5e5e5] text-black w-[217px] h-[57.63px] rounded-sm font-medium hover:bg-white transition-colors text-base flex items-center justify-center">
                 Explore
               </button>
@@ -123,7 +123,7 @@ export default function HomePage() {
             </div>
 
             {/* Khối Card Cruzz - Bám sát CSS Figma tuyệt đối */}
-            <div className="hidden md:block absolute origin-top-left md:scale-[0.82] lg:scale-100" style={{ width: '409px', height: '308.86px', left: '0px', top: '366.5px' }}>
+<div className="hidden md:block relative origin-top-left md:scale-[0.82] lg:scale-100" style={{ width: '409px', height: '308.86px' }}>
               
               {/* Image 36 (Robot) */}
               <div 
